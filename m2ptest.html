@@ -7,13 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="mofcharts.css">
-    <script type="text/javascript" src="3dMOF1.js"></script><center><form><input type="button" value="ENTER PROTECTED AREA" onClick="passWord()"></form></center>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="3dMOF2.js"></script>
   </head>
 
   <body>
-    <!-- Title -->
     <div class="w3-cell-row" style="width: 100%; height:45px">
       <div class="w3-col m3 l2 w3-hide-small" style="text-align:center; margin:auto;">
         <img src="camLogo.jpg" height="45px">
@@ -51,13 +50,14 @@
 
 
       <div id="controls" class="w3-container w3-cell w3-mobile">
-<!--        <div id="pressureBar" style="font-family:'Open Sans'; margin:auto;">  -->
-<!--       <p id="pressureTitle">Pressure, bar: &nbsp;<span id="pressureOverlay"></span>&nbsp;&nbsp;   -->
-<!--          <i class="material-icons"><input id="playButton" type="button" value="play_arrow" onclick="playButtonClick()"></i>&nbsp;&nbsp; -->
-<!--          <span id="warningText"></span></p>  -->
-<!--        0.1 &nbsp; <input id="slider" type="range" min="0" max="1" value="0.53" step="0.002" style="width: calc(100% - 4em);">   -->
-<!--        &nbsp; 5  -->
-<!--        </div>    -->
+       <!--
+       <div id="pressureBar" style="font-family:'Open Sans'; margin:auto;">  
+       <p id="pressureTitle">Pressure, bar: &nbsp;<span id="pressureOverlay"></span>&nbsp;&nbsp;   
+          <i class="material-icons"><input id="playButton" type="button" value="play_arrow" onclick="playButtonClick()"></i>&nbsp;&nbsp; 
+          <span id="warningText"></span></p>  
+        0.1 &nbsp; <input id="slider" type="range" min="0" max="1" value="0.53" step="0.002" style="width: calc(100% - 4em);">  
+        &nbsp; 5  
+      </div>-->
 
         <div class="w3-row">
           <form>
@@ -155,6 +155,7 @@
           </select></div>
           <div class="w3-col m6 l3"><span class="control_axis_title">c-axis:</span>
           <select id="colorSelect" style="width:180px">
+            <option value="0">Material</option>
             <option value="1">Density</option>
             <option value="2">Pore Limiting Diameter</option>
             <option value="3">Largest Cavity Diameter</option>
@@ -200,7 +201,7 @@
             <option value="43">Propane Heat of Adsorption</option>
           </select></div>
           <div class="w3-col m6 l3"><span class="control_axis_title">s-axis:</span>
-          <select id="sizeSelect" style="width:180px">
+          <select id="sizeSelect">
             <option value="1">Density</option>
             <option value="2">Pore Limiting Diameter</option>
             <option value="3">Largest Cavity Diameter</option>
